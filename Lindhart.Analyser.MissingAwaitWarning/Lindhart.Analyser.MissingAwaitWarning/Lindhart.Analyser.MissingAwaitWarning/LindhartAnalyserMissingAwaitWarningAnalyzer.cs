@@ -7,6 +7,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.CodeAnalysis.Shared.Extensions;
 
 namespace Lindhart.Analyser.MissingAwaitWarning
 {
@@ -56,8 +57,8 @@ namespace Lindhart.Analyser.MissingAwaitWarning
                 {
                     if (node.Parent is ExpressionStatementSyntax)
                     {
-                        // Check the method return type against all the known awaitable types.
-                        if (EqualsType(methodSymbol.ReturnType, syntaxNodeAnalysisContext.SemanticModel, AwaitableTypes))
+												// Check the method return type against all the known awaitable types.
+                        if (methodSymbol.ReturnType.IsAwaitableNonDynamic(syntaxNodeAnalysisContext.SemanticModel, 1))
                         {
                             var diagnostic = Diagnostic.Create(Rule, node.GetLocation(), methodSymbol.ToDisplayString());
 

@@ -8,7 +8,7 @@
   
   <PropertyGroup>
     <PackageId>Lindhart.Analyser.MissingAwaitWarning</PackageId>
-    <PackageVersion>1.1.0.0</PackageVersion>
+    <PackageVersion>1.1.1.0-beta</PackageVersion>
     <Authors>Morten Hartlev Lindhart, Alessandro Losi</Authors>
     <PackageLicenseUrl>https://github.com/ykoksen/unused-task-warning/blob/master/LICENSE.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/ykoksen/unused-task-warning</PackageProjectUrl>
@@ -25,8 +25,8 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>LindhartKey.pfx</AssemblyOriginatorKeyFile>
     <RepositoryType>git (GitHub)</RepositoryType>
-    <Version>1.1.0.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <Version>1.1.1.0-beta</Version>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
     <FileVersion>1.1.0.0</FileVersion>		
   </PropertyGroup>
   
